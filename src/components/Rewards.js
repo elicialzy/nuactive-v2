@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Box } from "grommet";
+import Reward from "./RewardsList";
 
 class Rewards extends Component {
   render() {
@@ -12,10 +13,10 @@ class Rewards extends Component {
             </h1>
           </div>
         </div>
-        <Box pad="large" background="#F2EEF9" style={boxStyle}>
-          <p class="para" style={paraStyle}>
-            moolas
-          </p>
+        <Box pad="large" background="#F2EEF9" style={boxStyle} overflow="auto">
+          <div className="items">
+            <Reward />
+          </div>
         </Box>
       </div>
     );
@@ -28,18 +29,11 @@ const jumbotronStyle = {
 
 const h1Style = {
   color: "white",
+  fontSize: "50px",
 };
 
 const boxStyle = {
   padding: "10px",
-};
-
-const paraStyle = {
-  padding: "10px",
-  margin: "10px 20px 10px 20px",
-  fontSize: "17px",
-  text: "align",
-  textAlign: "justify",
 };
 
 export default Rewards;
